@@ -13,6 +13,9 @@ footer {
     height: 50px;
     color: #707372;
     text-align: center;
+    width: 100%;
+    margin-left: 0;
+    margin-right: 0;
 
 }
 
@@ -271,38 +274,21 @@ h4  {
     color: white;
 }
 
-/*.btn-primary:active {*/
-/*background-color: #000;*/
-/*outline: none;*/
-
-/*}*/
-
-/*.well .btn-primary:active {*/
-/*background-color: red;*/
-/*outline: none;*/
-
-/*}*/
-
 .btn-primary:active:focus {
     background-color: #000;
     outline: none;
 
 }
-
-
 .well .btn-primary:active:focus {
     background-color: #000;
     outline: none;
-
 }
-
 
 .info-title {
     color: #2f3835;
     font-size: 14px;
     font-family: sans-serif;
     font-weight: bolder;
-
 }
 
 p {
@@ -339,7 +325,6 @@ p {
     margin-left: auto;
     margin-right: auto;
     text-align: center;
-
 }
 
 /* REGISTER PAGE */
@@ -415,9 +400,6 @@ p {
 
 p.help-block {
     background-color: white;
-}
-
-.chart-bar {
 }
 
 canvas{
