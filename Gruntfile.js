@@ -46,19 +46,28 @@ module.exports = function(grunt){
             angular: {
                 expand: true,
                 cwd: 'node_modules',
-                src: 'angular/angular.min.js',
+                src: [
+                    'angular/angular.min.js',
+                    'angular/angular.min.js.map'
+                    ],
                 dest: 'server/public/vendors'
             },
             angularRoutes: {
                 expand: true,
                 cwd: 'node_modules',
-                src: 'angular-route/angular-route.min.js',
+                src: [
+                    'angular-route/angular-route.min.js',
+                    'angular-route/angular-route.min.js.map'
+                    ],
                 dest: 'server/public/vendors'
             },
             angularAnimate: {
                 expand:true,
                 cwd: 'node_modules',
-                src: 'angular-animate/angular-animate.min.js',
+                src: [
+                    'angular-animate/angular-animate.min.js',
+                    'angular-animate/angular-animate.min.js.map'
+                    ],
                 dest: 'server/public/vendors'
             },
             bootstrap: {
@@ -70,7 +79,10 @@ module.exports = function(grunt){
             jquery: {
                 expand: true,
                 cwd: 'node_modules',
-                src: 'jquery/dist/jquery.min.js',
+                src: [
+                    'jquery/dist/jquery.min.js',
+                    'jquery/dist/jquery.min.map'
+                    ],
                 dest: 'server/public/vendors'
             },
             chart: {
@@ -94,7 +106,10 @@ module.exports = function(grunt){
             cookies: {
                 expand: true,
                 cwd: 'node_modules',
-                src: 'angular-cookies/angular-cookies.min.js',
+                src: [
+                    'angular-cookies/angular-cookies.min.js',
+                    'angular-cookies/angular-cookies.min.js.map'
+                    ],
                 dest: 'server/public/vendors'
             }
         }
