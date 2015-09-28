@@ -4,7 +4,7 @@ var reveApp = angular.module('reveApp');
 reveApp.controller("LoginController", ["$scope", "$http", "$location", 'AuthService', '$rootScope', '$timeout', function($scope, $http, $location, AuthService, $timeout, $rootScope, immediateCookiesInterceptor){
 
     console.log("Login Controller is working!");
-
+    console.log("Testing copy");
 
     $scope.login = function () {
 
