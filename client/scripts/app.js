@@ -136,15 +136,22 @@ reveApp.factory('AuthService',
 
 reveApp.run(['$rootScope', '$location', '$route', 'AuthService', function ($rootScope, $location, $route, AuthService) {
     $rootScope.$on('$routeChangeStart', function (event, next, current) {
-        if (!AuthService.authorize(next.security)) {
-            if (AuthService.isLoggedIn()) {
-                $location.path('/unauthorized');
-            } else {
-                $location.path('/login');
-                console.log('ah ah ah, you didnt say the magic word');
-            }
-
+        //if (!AuthService.authorize(next.security)) {
+        //    if (AuthService.isLoggedIn()) {
+        //        $location.path('/unauthorized');
+        //    } else if(AuthService.isLoggedIn==false){
+        //        $location.path('/login');
+        //        console.log('ah ah ah, you didnt say the magic word');
+        //    }
+        //
+        //}
+        if (AuthService.isLoggedIn() ==false) {
+            $location.path('/login');
+            console.log('ah ah ah, you didnt say the magic word');
+        } else if (AuthService.isLoggedIn && (!AuthService.authorize(next.security))) {
+            $location.path('/unauthorized');
         }
+
     });
 
 }]);
